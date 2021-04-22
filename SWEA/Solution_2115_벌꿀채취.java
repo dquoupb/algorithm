@@ -27,7 +27,9 @@ public class Solution_2115_벌꿀채취 {
 				}
 			}
 
-			int profit = 0, profitX=0, profitY=0; // 수익 최대값 구하기 위한 숫자
+			// start 배열에는 해당 칸을 시작으로 m칸까지 선택했을 때 추출할 수 있는 최대 이익을 저장한 배열이다.
+			// 그래서 start[n][n-m]칸으로 구성되어 있다!
+			int profit = 0, profitX=0, profitY=0; // 수익 최대값, 수익 최대값의 위치 인덱스
 			for (int i = 0; i < n; i++) {
 				for (int j = 0; j <= n - m; j++) {
 					max = 0;
@@ -40,23 +42,23 @@ public class Solution_2115_벌꿀채취 {
 					}
 				}
 			}
-			// start 배열에 각각 행으로 벌꿀 통 최대값 저장
 			
-			// start 배열에서 최대값인것 추출
+			// start 배열에서 최대값인 것 추출
 			int profitSec = 0;
 			for (int i = 0; i < n; i++) {
 				for (int j = 0; j <= n - m; j++) {
 					if(start[i][j]<=profit) {
-						if(profitX == i) {
-							if(profitY+m<=j)
+						if(profitX == i) { // 최대 수익이 선택된 행과 같은 행에 있을 경우 겹치지 않게 계산해야 함
+							if(profitY + m <= j)
 								profitSec = Math.max(profitSec, start[i][j]);
 						}
-						else
+						else // 최대 수익이 선택된 행과 다른 행에 있을 경우에는 그냥 나머지 행에서 최대값 구해오면 됨
 							profitSec = Math.max(profitSec, start[i][j]);
 					}
 				}
 			}
 
+			// 확인
 			/*for(int i=0; i<n; i++) {
 				for(int j=0; j<=n-m; j++) {
 					System.out.print(start[i][j]+" ");
@@ -69,7 +71,7 @@ public class Solution_2115_벌꿀채취 {
 		}
 	}
 
-	// 묶은 무리 안에서 부분집합으로 최대합 찾아냄
+	// 선택한 m개의 벌꿀 통 안에서 부분집합으로 c를 넘지 않고 이익이 최대인 구성 첮아서 start 맴에 저장함
 	static void subset(int idx, int x, int y) {
 		if (idx == m) {
 			int sum = 0, value = 0;
