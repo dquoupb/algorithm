@@ -4,7 +4,7 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-public class Main_G4_16916_부분문자열 {
+public class Main_16916_G4_부분문자열 {
 	static String p, s;
 
 	public static void main(String[] args) throws IOException {

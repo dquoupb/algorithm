@@ -5,9 +5,9 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
-public class Main_G4_1717_집합의표현 {
+public class Main_1717_G4_집합의표현 {
 	static int n, m;
-	static int[] parent;
+	static int[] parent, rank;
 	
 	public static void main(String[] args) throws IOException {
 		BufferedReader bf = new BufferedReader(new InputStreamReader(System.in));
@@ -15,6 +15,7 @@ public class Main_G4_1717_집합의표현 {
 		n = Integer.parseInt(st.nextToken());
 		m = Integer.parseInt(st.nextToken());
 		parent = new int[n+1];
+		rank = new int[n+1];
 		makeSet();
 		
 		for(int i=0; i<m; i++) {
@@ -36,6 +37,7 @@ public class Main_G4_1717_집합의표현 {
 	static void makeSet() {
 		for(int i=0; i<=n; i++) {
 			parent[i] = i;
+			rank[i] = i;
 		}
 	}
 	
@@ -50,7 +52,17 @@ public class Main_G4_1717_집합의표현 {
 		int rootB = findSet(b);
 		if(rootA == rootB)
 			return false;
+		if(rank[rootB] > rank[rootA]) {
+			int temp = rootA;
+			rootA = rootB;
+			rootB = temp;
+		}
 		parent[rootB] = rootA;
+		
+		// 갚이가 같으면 a의 깊이를 늘려주면 된다.
+		if(rank[rootA] == rank[rootB])
+			++rank[rootA];
+		
 		return true;
 	}
 }
