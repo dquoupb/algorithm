@@ -14,6 +14,7 @@
 * findSet은 path 압축
 ![유니온파인드](./img/path압축.jpg)
 <br>
+
 * union은 rank 압축
 ![유니온파인드](./img/rank압축.jpg)
 <br><br>
