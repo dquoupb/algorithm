@@ -10,7 +10,6 @@
 3. union(a, b) : 노드 a와 노드 b가 속해있는 집합을 합치는 함수
 
 
-
 * findSet은 path 압축
 ![유니온파인드](./img/path압축.jpg)
 <br>
@@ -18,5 +17,8 @@
 * union은 rank 압축
 ![유니온파인드](./img/rank압축.jpg)
 <br><br>
+
+Main_1717_G4_집합의표현<br>
+Main_1976_G4_여행가자 
 
 ### 📌 크루스칼 알고리즘
