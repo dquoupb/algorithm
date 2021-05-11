@@ -1,3 +1,29 @@
+# ✨알고리즘 정리
+### 알고리즘 문제사이트
+- [백준](https://www.acmicpc.net/)
+- [SWEA](https://swexpertacademy.com/main/main.do)
+- [프로그래머스](https://programmers.co.kr/)
+- [정올](http://www.jungol.co.kr/)
+
+### 📰 주요 언어 및 공부 방법
+
+- Java를 사용하여 알고리즘 문제풀이
+- 문제를 풀면서 어떤 알고리즘이 쓰이는지 생각하면서 구현
+- 공부한 내용 알고리즘 별로 정리하면서 다시 한 번 복습
+- 두시간 이상 못 풀고 붙잡고 있을 때는 풀이방법 찾아보고 완벽하게 이해하기
+- 걸린 시간 기록 + 줄일 수 있으면 효율성 높여보기(?)
+
+### 🥇 정리한(할) 알고리즘
+| 알고리즘  | ★☆★☆               | 정리 및 복습         |
+| :------------ | :-----------: | -------------------: |
+| BFS    | [★☆☆☆☆]          | X               |
+| DFS    | [★☆☆☆☆]          | X               |
+| KMP    | [★★★☆☆](./KMP)          | O               |
+| Union Find    | [★★☆☆☆](./Disjoint/unionfind)      | O               |
+| Dijkstra     | [★★★☆☆](./Disjoint/Dijkstra)  | X               |
+
+<br><br>
+
 # 👑알고왕 스터디
 ### 📅 시간
 
@@ -11,20 +37,10 @@
 
 ⇒ 화,목 :  스터디 시간에 같이 진행
 
-⇒ 월,수,금 : 정해진 알고리즘 문제 1문제 풀고 깃헙에 업로드
-
-⇒ 일요일 : 다음주 풀 문제들 ( 5문제 ) 정하기
-
-- 수업시간에 배운 이론 응용 알고리즘 풀기
-- 캠 키고 진행
-- 알고리즘 문제 같이 풀기 & 필요시 코드 설명
-- 문제를 다 풀면 해당 요일 안에 .java 파일을 깃헙에 업로드해주세요!
-
 ### 💥패널티
 
 - : 보증금(3만원) → 무단 지각 시 (- 분당 백원), 과제 안풀시 (-1000원), 무단 결석 (-2000원)
 - 보충수업 기간동안은 주 2회 유동적, 스터디 과제 없이 모여서 푸는 것만
-
 ### 🖥️ Chrome Study용 확장 프로그램
 
 - 삼성 익스퍼트 아카데미 홈페이지의 input 파일, output 파일을 쉽게 복사하는 plugin
@@ -41,12 +57,8 @@
 ```bash
 $ git add .
 $ git commit -m "Commit Message"
-$ git push
+$ git push origin master
 ```
-
-⇒ `git push` 는 기본적으로 현재 브랜치에 push가 된다. 
-
-⇒ 다른 브랜치에 push를 원할 경우 `git push origin "branch명"`
 
 - push 시 -set - -upstream 에러가 발생했을 경우
 
@@ -54,7 +66,7 @@ $ git push
 $ git push -u origin "push할 branch"
 
 # 예시
-$ git push -u origin youn
+$ git push -u origin master
 ```
 
 - master 브랜치에 업데이트 내용 끌어오기
@@ -62,8 +74,6 @@ $ git push -u origin youn
 ```bash
 $ git pull origin master
 ```
-
-⇒ origin 뒤에 끌어오고 싶은 브랜치명을 적어주면 된다. 예를 들어 youn 브랜치의 내용을 끌어오고 싶을 경우 `git pull origin youn` 을 진행
 
 ### 🔖 이외에 코딩 가이드가 필요할 땐?
 
