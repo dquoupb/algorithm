@@ -1,7 +1,6 @@
 package baekjoon;
 
 /**
-예외
 6
 1 5 6 1 1 1
 → 15
